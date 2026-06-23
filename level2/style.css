@@ -15,7 +15,7 @@ body {
 }
 
 .navbar h2 {
-  color: red;
+  color: #e50914;
 }
 
 /* Button */
@@ -23,7 +23,7 @@ button {
   padding: 8px 15px;
   border: none;
   cursor: pointer;
-  background: red;
+  background: #e50914;
   color: white;
   border-radius: 5px;
 }
@@ -34,7 +34,7 @@ button {
   padding: 80px 20px;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -42,6 +42,6 @@ button {
   }
 
   .hero {
-    padding: 50px 10px;
+    padding: 50px 15px;
   }
 }
