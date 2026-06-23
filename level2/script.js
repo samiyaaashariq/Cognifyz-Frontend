@@ -1,4 +1,4 @@
 function showMessage() {
   document.getElementById("msg").innerText =
-    "Button clicked! Interactive feature working 🎉";
+    "Welcome to StreamFlix 🎬 - Interactive feature working successfully!";
 }
