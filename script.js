@@ -1,75 +1,56 @@
-// Task 4
+const themeBtn =
+document.getElementById("themeBtn");
 
-const btn = document.getElementById("colorBtn");
-
-btn.addEventListener("click", () => {
+themeBtn.addEventListener("click",()=>{
 
     const colors = [
-        "#ffcccc",
-        "#ccffcc",
-        "#ccccff",
-        "#ffffcc",
-        "#ffd9b3"
+        "#f8f9fa",
+        "#d4edda",
+        "#d1ecf1",
+        "#fff3cd"
     ];
 
-    const randomColor =
+    document.body.style.backgroundColor =
     colors[Math.floor(Math.random()*colors.length)];
 
-    document.body.style.backgroundColor =
-    randomColor;
 });
 
+fetch("https://dummyjson.com/quotes/random")
+.then(response=>response.json())
+.then(data=>{
 
-// Task 5
-
-fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-.then(response => response.json())
-.then(data => {
-
-    const postsDiv =
-    document.getElementById("posts");
-
-    data.forEach(post => {
-
-        postsDiv.innerHTML += `
-            <h3>${post.title}</h3>
-            <p>${post.body}</p>
-            <hr>
-        `;
-    });
+    document.getElementById("quote").innerHTML =
+    `"${data.quote}"`;
 
 });
 
-
-// Task 6
-
-document.getElementById("myForm")
-.addEventListener("submit", function(e){
+document.getElementById("contactForm")
+.addEventListener("submit",(e)=>{
 
     e.preventDefault();
 
-    let name =
+    const name =
     document.getElementById("name").value;
 
-    let email =
+    const email =
     document.getElementById("email").value;
 
-    let message =
+    const message =
     document.getElementById("message");
 
-    if(name === "" || email === ""){
+    if(name==="" || email===""){
 
         message.innerHTML =
         "Please fill all fields";
 
-        message.style.color = "red";
+        message.style.color="red";
 
         return;
     }
 
     message.innerHTML =
-    "Form Submitted Successfully";
+    "Message Submitted Successfully";
 
-    message.style.color = "green";
+    message.style.color="green";
 
 });
