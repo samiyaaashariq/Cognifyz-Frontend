@@ -1,159 +1,236 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:‘Segoe UI’,sans-serif;
 }
 
 body{
-    background:#0f0f0f;
-    color:white;
+background:#0f0f0f;
+color:white;
+transition:0.4s;
 }
 
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
-    background:black;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-    color:#e50914;
-    font-size:2rem;
-    font-weight:bold;
+font-size:2rem;
+font-weight:bold;
+color:#e50914;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#e50914;
 }
 
 #themeBtn{
-    padding:10px 15px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+padding:10px 16px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
 }
 
 .hero{
-    height:90vh;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)
-    ),
-
-    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1500&q=80");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.7),
+rgba(0,0,0,.8)),
+url(“https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1600&q=80”);
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero-content{
-    max-width:700px;
+max-width:800px;
 }
 
 .hero h1{
-    font-size:3rem;
-    margin-bottom:20px;
+font-size:4rem;
+margin-bottom:20px;
 }
 
 .hero p{
-    margin-bottom:15px;
+font-size:1.2rem;
+margin-bottom:20px;
 }
 
 form{
-    margin-top:20px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
 }
 
 input{
-    padding:12px;
-    width:280px;
-    border:none;
-    border-radius:5px;
+padding:14px;
+width:320px;
+border:none;
+border-radius:6px;
 }
 
 form button{
-    padding:12px 20px;
-    border:none;
-    background:#e50914;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
+padding:14px 22px;
+border:none;
+background:#e50914;
+color:white;
+font-weight:bold;
+border-radius:6px;
+cursor:pointer;
+}
+
+.featured{
+padding:60px;
+}
+
+.featured h2{
+margin-bottom:25px;
+}
+
+.featured-card{
+height:300px;
+border-radius:15px;
+background:
+linear-gradient(rgba(0,0,0,.4),
+rgba(0,0,0,.7)),
+url(“https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80”);
+background-size:cover;
+display:flex;
+align-items:end;
+padding:30px;
+}
+
+.featured-info h3{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.featured-info button{
+margin-top:15px;
+padding:12px 20px;
+background:#e50914;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
 .movies{
-    padding:50px;
+padding:60px;
 }
 
 .movies h2{
-    margin-bottom:25px;
+margin-bottom:25px;
 }
 
 #movieContainer{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .card{
-    width:250px;
-    background:#1f1f1f;
-    border-radius:10px;
-    overflow:hidden;
-
-    transition:0.3s;
+background:#1a1a1a;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
 }
 
 .card:hover{
-    transform:scale(1.05);
+transform:translateY(-8px);
 }
 
 .card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
 .card h3{
-    padding:10px;
+padding:12px;
 }
 
 .card p{
-    padding:0 10px 15px;
+padding:0 12px 15px;
+color:#ccc;
+}
+
+.faq{
+padding:60px;
+}
+
+.faq h2{
+margin-bottom:25px;
+}
+
+.faq-item{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:black;
+background:black;
+text-align:center;
+padding:30px;
+margin-top:30px;
+}
+
+.light-mode{
+background:white;
+color:black;
 }
 
 @media(max-width:768px){
 
-    .navbar{
-        padding:15px;
-    }
+.navbar{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
 
-    .hero h1{
-        font-size:2rem;
-    }
+.hero h1{
+font-size:2.3rem;
+}
 
-    input{
-        width:100%;
-        margin-bottom:10px;
-    }
+.featured,
+.movies,
+.faq{
+padding:25px;
+}
 
-    form button{
-        width:100%;
-    }
+input{
+width:100%;
+}
 
-    .movies{
-        padding:20px;
-    }
+form button{
+width:100%;
+}
 
 }
