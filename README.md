@@ -8,7 +8,7 @@
 ---
 
 ## 🚀 Live Demo
-> Add your deployed link here (Vercel / Netlify)  
+ 
 **Live Project:**  https://samiyaaashariq.github.io/Cognifyz-Frontend/
 
 ---
