@@ -1,36 +1,61 @@
 const themeBtn =
 document.getElementById("themeBtn");
 
+let darkMode = true;
+
 themeBtn.addEventListener("click",()=>{
 
-    const colors = [
-        "#f8f9fa",
-        "#d4edda",
-        "#d1ecf1",
-        "#fff3cd"
-    ];
+    if(darkMode){
 
-    document.body.style.backgroundColor =
-    colors[Math.floor(Math.random()*colors.length)];
+        document.body.style.background =
+        "#1d1d3d";
+
+        darkMode = false;
+
+    }else{
+
+        document.body.style.background =
+        "#0f0f0f";
+
+        darkMode = true;
+    }
 
 });
 
-fetch("https://dummyjson.com/quotes/random")
+fetch("https://dummyjson.com/products?limit=8")
+
 .then(response=>response.json())
+
 .then(data=>{
 
-    document.getElementById("quote").innerHTML =
-    `"${data.quote}"`;
+    const container =
+    document.getElementById("movieContainer");
+
+    data.products.forEach(movie=>{
+
+        container.innerHTML += `
+
+        <div class="card">
+
+            <img src="${movie.thumbnail}">
+
+            <h3>${movie.title}</h3>
+
+            <p>${movie.description}</p>
+
+        </div>
+
+        `;
+    });
 
 });
 
-document.getElementById("contactForm")
+document
+.getElementById("signupForm")
+
 .addEventListener("submit",(e)=>{
 
     e.preventDefault();
-
-    const name =
-    document.getElementById("name").value;
 
     const email =
     document.getElementById("email").value;
@@ -38,19 +63,21 @@ document.getElementById("contactForm")
     const message =
     document.getElementById("message");
 
-    if(name==="" || email===""){
+    if(email===""){
 
         message.innerHTML =
-        "Please fill all fields";
+        "Please enter your email.";
 
-        message.style.color="red";
+        message.style.color =
+        "yellow";
 
         return;
     }
 
     message.innerHTML =
-    "Message Submitted Successfully";
+    "Welcome to StreamFlix!";
 
-    message.style.color="green";
+    message.style.color =
+    "lightgreen";
 
 });
