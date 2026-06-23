@@ -5,48 +5,84 @@ let darkMode = true;
 
 themeBtn.addEventListener("click",()=>{
 
-    if(darkMode){
+if(darkMode){
 
-        document.body.style.background =
-        "#1d1d3d";
+document.body.style.background="#ffffff";
+document.body.style.color="#000000";
 
-        darkMode = false;
+darkMode=false;
 
-    }else{
+}else{
 
-        document.body.style.background =
-        "#0f0f0f";
+document.body.style.background="#0f0f0f";
+document.body.style.color="#ffffff";
 
-        darkMode = true;
-    }
+darkMode=true;
+
+}
 
 });
 
-fetch("https://dummyjson.com/products?limit=8")
+   const movies = [
 
-.then(response=>response.json())
+{
+title:"Inception",
+image:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+description:"A mind-bending science fiction thriller."
+},
 
-.then(data=>{
+{
+title:"Interstellar",
+image:"https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
+description:"A journey through space and time."
+},
 
-    const container =
-    document.getElementById("movieContainer");
+{
+title:"The Dark Knight",
+image:"https://images.unsplash.com/photo-1478720568477-152d9b164e26",
+description:"The legendary Batman adventure."
+},
 
-    data.products.forEach(movie=>{
+{
+title:"Avengers Endgame",
+image:"https://images.unsplash.com/photo-1440404653325-ab127d49abc1",
+description:"Earth's mightiest heroes unite."
+},
 
-        container.innerHTML += `
+{
+title:"Joker",
+image:"https://images.unsplash.com/photo-1505685296765-3a2736de412f",
+description:"The origin story of Gotham's villain."
+},
 
-        <div class="card">
+{
+title:"Spider-Man",
+image:"https://images.unsplash.com/photo-1513104890138-7c749659a591",
+description:"A friendly neighborhood superhero."
+}
 
-            <img src="${movie.thumbnail}">
+];
 
-            <h3>${movie.title}</h3>
+const container =
+document.getElementById("movieContainer");
 
-            <p>${movie.description}</p>
+movies.forEach(movie=>{
 
-        </div>
+container.innerHTML += `
 
-        `;
-    });
+<div class="card">
+
+<img src="${movie.image}">
+
+<h3>${movie.title}</h3>
+
+<p>${movie.description}</p>
+
+</div>
+
+`;
+
+});
 
 });
 
