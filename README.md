@@ -9,7 +9,7 @@
 
 ## 🚀 Live Demo
 > Add your deployed link here (Vercel / Netlify)  
-**Live Project:** https://your-live-demo-link.com
+**Live Project:**  https://samiyaaashariq.github.io/Cognifyz-Frontend/
 
 ---
 
@@ -57,7 +57,9 @@ project-folder/
 ---
 
 ## 📸 Preview
-Add a screenshot or screen recording of your project here.
+<img width="1878" height="2527" alt="Screenshot_23-6-2026_133639_127 0 0 1" src="https://github.com/user-attachments/assets/59e9099f-3a0f-4fee-a889-b1526112d840" />
+<img width="1878" height="2521" alt="Screenshot_23-6-2026_133849_127 0 0 1" src="https://github.com/user-attachments/assets/1a337025-64fe-4aad-b7bc-965c6c71ebfa" />
+
 
 ---
 
