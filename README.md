@@ -57,6 +57,19 @@ project-folder/
 ---
 
 ## 📸 Preview
+HOMEPAGE
+<img width="952" height="477" alt="cognifyz homepage" src="https://github.com/user-attachments/assets/dc206960-7e1f-4d4b-a65e-f19198e62397" />
+
+
+LEVEL-1: Basic HTML (Beginner)
+<img width="905" height="451" alt="cognifyz level1" src="https://github.com/user-attachments/assets/f2b333d6-5868-4074-adea-6fcf3162cdf7" />
+
+
+LEVEL-2: Responsive Design + Interactivity
+<img width="956" height="450" alt="cognifyz level2" src="https://github.com/user-attachments/assets/3c0e88b2-540a-4062-adcb-d9f45010b5bf" />
+
+
+LEVEL-3: StreamFlix Final Project
 <img width="1878" height="2527" alt="Screenshot_23-6-2026_133639_127 0 0 1" src="https://github.com/user-attachments/assets/59e9099f-3a0f-4fee-a889-b1526112d840" />
 <img width="1878" height="2521" alt="Screenshot_23-6-2026_133849_127 0 0 1" src="https://github.com/user-attachments/assets/1a337025-64fe-4aad-b7bc-965c6c71ebfa" />
 
