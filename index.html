@@ -1,88 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cognifyz Frontend Internship</title>
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamFlix</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Samiya Shariq</h1>
-    <p>Aspiring Software Developer | CSE Student</p>
+<nav class="navbar">
+    <h1 class="logo">STREAMFLIX</h1>
 
     <button id="themeBtn">
         Change Theme
     </button>
-</header>
+</nav>
 
-<section class="about">
-    <h2>About Me</h2>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Unlimited Movies, TV Shows and More</h1>
+
+        <p>
+            Watch anywhere. Cancel anytime.
+        </p>
+
+        <p>
+            Ready to watch? Enter your email to create or restart your membership.
+        </p>
+
+        <form id="signupForm">
+
+            <input
+            type="email"
+            id="email"
+            placeholder="Enter Email Address">
+
+            <button type="submit">
+                Get Started
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+<section class="movies">
+
+    <h2>Trending Now</h2>
+
+    <div id="movieContainer">
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>StreamFlix</h3>
+
     <p>
-        Passionate Computer Science student focused on
-        Web Development, Python, AI, and Startup Building.
+        Front-End Internship Project
     </p>
-</section>
 
-<section class="skills">
-    <h2>Skills</h2>
-
-    <div class="card">HTML</div>
-    <div class="card">CSS</div>
-    <div class="card">JavaScript</div>
-    <div class="card">Python</div>
-    <div class="card">Firebase</div>
-</section>
-
-<section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        SyncUp – Team Finder Platform
-    </div>
-
-    <div class="project">
-        Hangman Game – Python Project
-    </div>
-
-    <div class="project">
-        Restaurant Menu Website
-    </div>
-</section>
-
-<section>
-    <h2>Technology Quote</h2>
-
-    <div id="quote">
-        Loading quote...
-    </div>
-</section>
-
-<section>
-    <h2>Contact Me</h2>
-
-    <form id="contactForm">
-
-        <input
-        type="text"
-        id="name"
-        placeholder="Your Name">
-
-        <input
-        type="email"
-        id="email"
-        placeholder="Your Email">
-
-        <button type="submit">
-            Send
-        </button>
-
-    </form>
-
-    <p id="message"></p>
-</section>
+</footer>
 
 <script src="script.js"></script>
 
