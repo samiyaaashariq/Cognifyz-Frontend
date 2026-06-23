@@ -9,60 +9,82 @@
 </head>
 <body>
 
-    <h1 style="color:blue;">
-        Welcome to Cognifyz Internship
-    </h1>
+<header>
+    <h1>Samiya Shariq</h1>
+    <p>Aspiring Software Developer | CSE Student</p>
 
-    <p style="font-size:20px; color:green;">
-        This webpage is created for Front-End Development Internship Tasks.
-    </p>
-
-    <img
-    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-    width="300"
-    alt="Technology">
-
-    <br><br>
-
-    <button id="colorBtn">
-        Change Background Color
+    <button id="themeBtn">
+        Change Theme
     </button>
+</header>
 
-    <hr>
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        Passionate Computer Science student focused on
+        Web Development, Python, AI, and Startup Building.
+    </p>
+</section>
 
-    <h2>Posts From API</h2>
+<section class="skills">
+    <h2>Skills</h2>
 
-    <div id="posts"></div>
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Firebase</div>
+</section>
 
-    <hr>
+<section>
+    <h2>Projects</h2>
 
-    <h2>Contact Form</h2>
+    <div class="project">
+        SyncUp – Team Finder Platform
+    </div>
 
-    <form id="myForm">
+    <div class="project">
+        Hangman Game – Python Project
+    </div>
+
+    <div class="project">
+        Restaurant Menu Website
+    </div>
+</section>
+
+<section>
+    <h2>Technology Quote</h2>
+
+    <div id="quote">
+        Loading quote...
+    </div>
+</section>
+
+<section>
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
 
         <input
         type="text"
         id="name"
-        placeholder="Enter Name">
-
-        <br><br>
+        placeholder="Your Name">
 
         <input
         type="email"
         id="email"
-        placeholder="Enter Email">
-
-        <br><br>
+        placeholder="Your Email">
 
         <button type="submit">
-            Submit
+            Send
         </button>
 
     </form>
 
     <p id="message"></p>
+</section>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
