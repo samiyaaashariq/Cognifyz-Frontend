@@ -1,119 +1,118 @@
-const themeBtn =
-document.getElementById("themeBtn");
+const themeBtn = document.getElementById("themeBtn");
 
-let darkMode = true;
+themeBtn.addEventListener("click", () => {
 
-themeBtn.addEventListener("click",()=>{
-
-if(darkMode){
-
-document.body.style.background="#ffffff";
-document.body.style.color="#000000";
-
-darkMode=false;
-
+document.body.classList.toggle("light-mode");
+if(document.body.classList.contains("light-mode")){
+    themeBtn.innerHTML = "🌞 Theme";
 }else{
-
-document.body.style.background="#0f0f0f";
-document.body.style.color="#ffffff";
-
-darkMode=true;
-
+    themeBtn.innerHTML = "🌙 Theme";
 }
 
 });
 
-   const movies = [
+const movies = [
 
 {
-title:"Inception",
-image:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
-description:"A mind-bending science fiction thriller."
+title:"The Last Kingdom",
+image:"https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80",
+description:"An epic historical drama full of action and adventure."
 },
 
 {
-title:"Interstellar",
-image:"https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
-description:"A journey through space and time."
+title:"Cyber Future",
+image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+description:"A futuristic world powered by artificial intelligence."
 },
 
 {
-title:"The Dark Knight",
-image:"https://images.unsplash.com/photo-1478720568477-152d9b164e26",
-description:"The legendary Batman adventure."
+title:"Dark Horizon",
+image:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+description:"A suspense thriller that keeps you on the edge."
 },
 
 {
-title:"Avengers Endgame",
-image:"https://images.unsplash.com/photo-1440404653325-ab127d49abc1",
-description:"Earth's mightiest heroes unite."
+title:"Space Odyssey",
+image:"https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+description:"Journey through the mysteries of deep space."
 },
 
 {
-title:"Joker",
-image:"https://images.unsplash.com/photo-1505685296765-3a2736de412f",
-description:"The origin story of Gotham's villain."
+title:"Code Hunter",
+image:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80",
+description:"A cybersecurity expert tracks a global threat."
 },
 
 {
-title:"Spider-Man",
-image:"https://images.unsplash.com/photo-1513104890138-7c749659a591",
-description:"A friendly neighborhood superhero."
+title:"Legends Rise",
+image:"https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+description:"Heroes unite to save the world from chaos."
 }
 
 ];
 
-const container =
+const movieContainer =
 document.getElementById("movieContainer");
 
-movies.forEach(movie=>{
+movies.forEach(movie => {
 
-container.innerHTML += `
+movieContainer.innerHTML += `
 
 <div class="card">
-
-<img src="${movie.image}">
-
+<img src="${movie.image}" alt="${movie.title}">
 <h3>${movie.title}</h3>
-
 <p>${movie.description}</p>
-
 </div>
 
 `;
 
 });
 
-});
-
 document
 .getElementById("signupForm")
+.addEventListener("submit", function(e){
 
-.addEventListener("submit",(e)=>{
+e.preventDefault();
 
-    e.preventDefault();
+const email =
+document.getElementById("email").value;
 
-    const email =
-    document.getElementById("email").value;
+const message =
+document.getElementById("message");
 
-    const message =
-    document.getElementById("message");
+const emailPattern =
+/^[^\s@]+@[^\s@]+.[^\s@]+$/;
 
-    if(email===""){
+if(email === ""){
 
-        message.innerHTML =
-        "Please enter your email.";
+message.innerHTML =
+"Please enter your email address.";
 
-        message.style.color =
-        "yellow";
+message.style.color =
+"#ffcc00";
 
-        return;
-    }
+return;
 
-    message.innerHTML =
-    "Welcome to StreamFlix!";
+}
 
-    message.style.color =
-    "lightgreen";
+if(!emailPattern.test(email)){
+
+message.innerHTML =
+"Please enter a valid email address.";
+
+message.style.color =
+"#ff4444";
+
+return;
+
+}
+
+message.innerHTML =
+"🎉 Welcome to StreamFlix! Membership request received.";
+
+message.style.color =
+"#00ff99";
+
+document.getElementById("signupForm").reset();
 
 });
