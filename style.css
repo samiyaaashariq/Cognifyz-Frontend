@@ -1,65 +1,159 @@
-body{
-    font-family: Arial, sans-serif;
+*{
     margin:0;
     padding:0;
-    text-align:center;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-header{
-    padding:60px;
-    background:#222;
+body{
+    background:#0f0f0f;
     color:white;
 }
 
-section{
-    padding:30px;
-}
-
-.skills{
+.navbar{
     display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:black;
 }
 
-.card{
-    padding:15px 25px;
-    background:#f4f4f4;
-    border-radius:10px;
+.logo{
+    color:#e50914;
+    font-size:2rem;
+    font-weight:bold;
 }
 
-.project{
-    margin:10px;
-    padding:15px;
-    background:#eee;
-    border-radius:10px;
-}
-
-input{
-    display:block;
-    margin:10px auto;
-    padding:10px;
-    width:250px;
-}
-
-button{
-    padding:10px 20px;
+#themeBtn{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
     cursor:pointer;
 }
 
-#quote{
-    font-size:20px;
-    font-style:italic;
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
+    ),
+
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1500&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:15px;
+}
+
+form{
+    margin-top:20px;
+}
+
+input{
+    padding:12px;
+    width:280px;
+    border:none;
+    border-radius:5px;
+}
+
+form button{
+    padding:12px 20px;
+    border:none;
+    background:#e50914;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.movies{
+    padding:50px;
+}
+
+.movies h2{
+    margin-bottom:25px;
+}
+
+#movieContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    width:250px;
+    background:#1f1f1f;
+    border-radius:10px;
+    overflow:hidden;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
 }
 
 @media(max-width:768px){
 
-    header{
-        padding:30px;
+    .navbar{
+        padding:15px;
     }
 
-    .skills{
-        flex-direction:column;
-        align-items:center;
+    .hero h1{
+        font-size:2rem;
     }
+
+    input{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    form button{
+        width:100%;
+    }
+
+    .movies{
+        padding:20px;
+    }
+
 }
